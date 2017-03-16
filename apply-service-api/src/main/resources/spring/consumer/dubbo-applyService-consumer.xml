@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+	<dubbo:reference interface="com.myph.reception.service.ApplyReceptionService"
+		id="applyReceptionService" check="false" />
+
+	<dubbo:reference interface="com.myph.apply.service.ApplyInfoService"
+		id="applyInfoService" check="false" />
+
+	<dubbo:reference interface="com.myph.apply.service.ApplyUserService"
+		id="applyUserService" check="false" />
+
+	<dubbo:reference
+		interface="com.myph.personassets.service.ApplyPersonassetsService" id="applyPersonassetsService"
+		check="false" />
+	<!--统一流程通知管理服务 -->
+	<dubbo:reference interface="com.myph.flow.service.FlowStateExchangeService"
+		id="flowStateExchangeService" check="false" />
+	<!--外访管理服务 -->
+	<dubbo:reference interface="com.myph.visit.service.VisitService"
+		id="visitService" check="false" />
+	<!--申请进度管理服务 -->
+	<dubbo:reference interface="com.myph.applyprogress.service.ApplyProgressService"
+		id="applyProgressService" check="false" />
+	<!-- 附件上传服务 -->
+	<dubbo:reference interface="com.myph.apply.service.FileInfoService"
+		id="fileInfoService" check="false" />
+	<dubbo:reference interface="com.myph.apply.jobinfo.service.JobInfoService"
+		id="jobInfoService" check="false" />
+	<dubbo:reference interface="com.myph.apply.linkman.service.ContactsService"
+		id="contactsService" check="false" />
+	<dubbo:reference interface="com.myph.approvetask.service.ApproveTaskService"
+		id="approveTaskService" check="false" />
+	<dubbo:reference interface="com.myph.auditlog.service.AuditLogService"
+		id="auditLogService" check="false" />
+	<dubbo:reference interface="com.myph.audit.service.JkApplyAuditService"
+		id="jkApplyAuditService" check="false" />
+	<dubbo:reference
+		interface="com.myph.auditCashStatistics.service.AuditCashStatisticsService"
+		id="auditCashStatisticsService" check="false" />
+	<dubbo:reference
+		interface="com.myph.auditCashCount.service.AuditCashCountService" id="auditCashCountService"
+		check="false" />
+	<dubbo:reference interface="com.myph.audit.service.JkAuditCheckService"
+		id="jkAuditCheckServiceImpl" check="false" />
+	<dubbo:reference interface="com.myph.audit.service.AuditThridInfoService"
+		id="auditThridInfoService" check="false" />
+	<dubbo:reference interface="com.myph.auditCall.service.AuditCallHisService"
+		id="auditCallHisService" check="false" />
+	<dubbo:reference interface="com.myph.auditCall.service.AuditCallResultService"
+		id="auditCallResultService" check="false" />
+	<dubbo:reference interface="com.myph.apply.jobinfo.service.MemberJobService"
+		id="memberJobService" check="false" />
+	<dubbo:reference interface="com.myph.apply.linkman.service.MemberLinkmanService"
+		id="memberLinkmanService" check="false" />
+	<dubbo:reference interface="com.myph.sign.service.SignService"
+		id="signService" check="false" />
+	<dubbo:reference interface="com.myph.apply.service.ComplianceService"
+		id="complianceService" check="false" />
+	<dubbo:reference interface="com.myph.allot.service.AllotService"
+		id="allotService" check="false" />
+	<dubbo:reference interface="com.myph.compliance.service.JkComplianceService"
+        id="jkComplianceService" check="false" />
+    <dubbo:reference interface="com.myph.compliance.service.JkComplianceLogService"
+        id="jkComplianceLogService" check="false" />
+    <dubbo:reference interface="com.myph.sign.service.ContractService"
+		id="contractService" check="false" />
+    <dubbo:reference interface="com.myph.loan.service.LoanedService"
+		id="loanedService" check="false" />
+    <dubbo:reference interface="com.myph.mqSendLog.service.JkMqService"
+		id="jkMqService" check="false" />
+	<dubbo:reference interface="com.myph.sign.service.JkRepaymentPlanService"
+		id="jkRepaymentPlanService" check="false" />
+	<dubbo:reference interface="com.myph.reception.service.ApplyReceptionManageService"
+		id="applyReceptionManageService" check="false" />
+	<dubbo:reference interface="com.myph.PushContractBill.service.PushContarctAndBillTaskService"
+				   id="pushContarctAndBillTaskService" check="false"/>
+</beans>
